@@ -28,7 +28,7 @@ Kenzie assignment: String1
 def donuts(count):
     if count < 10:
         return 'Number of donuts:' + str(count)
-    return 'Number of donuts: many'
+    return 'Number of donuts: Many'
 
 
 # B. both_ends
