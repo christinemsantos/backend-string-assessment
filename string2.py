@@ -23,8 +23,12 @@ Kenzie Assignment: String2
 
 
 def verbing(s):
-    # your code here
-    return
+    if len(s) < 3:
+        return s
+    if s.endswith('ing'):
+        return s + 'ly'
+    return s + 'ing'
+    
 
 
 # E. not_bad
@@ -36,8 +40,11 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    # your code here
-    return
+    n = s.find('not')
+    b = s.find('bad')
+    if n > 0 and b > 0 and n < b:
+        return s[0:n] + 'good' + s[b+3:]
+    return s
 
 
 # F. front_back
@@ -48,8 +55,9 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    # your code here
-    return
+    mid_a = len(a) // 2 + len(a) % 2 
+    mid_b = len(b) // 2 + len(b) % 2
+    return a[0:mid_a] + b[0:mid_b] + a[mid_a:] + b[mid_b:]
 
 
 # Provided simple test() function used in main() to print
